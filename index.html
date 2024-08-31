@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TailwindCSS | Jonatandb practices </title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body class="dark:bg-slate-900 dark:text-white">
+
+  <div class="border-2 border-red-500 rounded-xl text-center w-[80%] mx-auto p-2 mt-3">
+    <a href="https://www.youtube.com/watch?v=5HtRcMSO1Ro" target="_blank"
+      class="text-2xl text-azul-claro hover:text-azul-oscuro">Aprende Tailwind CSS - Curso Completo - freeCodeCamp
+      Español
+    </a>
+  </div>
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">12 - Dark mode</p>
+  <div class="border-2 w-fit rounded-lg hover:bg-slate-300 dark:hover:bg-black p-2 mx-auto m-2">
+    <label for="darkCheck" class="dark:text-white text-2xl cursor-pointer select-none">Dark mode:</label>
+    <input type="checkbox" name="darkCheck" id="darkCheck" class="cursor-pointer">
+  </div>
+
+  <p class="ml-4 dark:text-white">Esto require esta línea en el archivo talwind.config.js:</p>
+  <pre class="dark:text-white">
+    export default {
+      darkMode: "class",
+  </pre>
+  <p class="ml-4 dark:text-white">y esto en la etiqueta body:</p>
+  <pre class="dark:text-white">
+    &lt;body class="dark:bg-slate-900"&gt;
+  </pre>
+  <p class="ml-4 dark:text-white">El check le agrega o quita la etiqueta "dark" al elemento html:</p>
+  <pre class="dark:text-white">
+    document.documentElement.classList.toggle('dark')
+  </pre>
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">11 - Grid</p>
+  <div
+    class="mx-auto ml-2 mr-2 pt-10 border rounded-xl p-4 mt-4 be grid grid-cols-4 gap-4 relative before:top-0 before:left-2 before:content-['Grid_requiere_grid_y_grid-cols-#_(aquí_grid-cols-4):'] before:absolute">
+    <div class="card2">1</div>
+    <div class="card2">2</div>
+    <div class="card2">3</div>
+    <div class="card2">4</div>
+    <div class="card2">5</div>
+    <div class="card2">6</div>
+    <div class="card2">7</div>
+    <div class="card2">8</div>
+    <div class="card2">9</div>
+  </div>
+
+  <div
+    class="mx-auto ml-2 mr-2 pt-10 border rounded-xl p-4 mt-4 be grid grid-cols-4 gap-4 relative before:top-0 before:left-2 before:content-['Ancho_de_hijos_personalizado_(Con_col-span-#_y_row-span-#):'] before:absolute">
+    <div class="card2 col-span-2">1</div>
+    <div class="card2">2</div>
+    <div class="card2 row-span-2">3</div>
+    <div class="card2">4</div>
+    <div class="card2">5</div>
+    <div class="card2">6</div>
+    <div class="card2 col-span-3">7</div>
+    <div class="card2">8</div>
+    <div class="card2 col-span-4">9</div>
+  </div>
+
+  <div
+    class="mx-auto ml-2 mr-2 pt-10 border rounded-xl p-4 mt-4 be grid grid-cols-4 gap-4 relative before:top-0 before:left-2 before:content-['Cambio_posición_de_hijo_(Con_col-start-#_,_col-[#/#],_row-start-#_y_row-[#/#]):'] before:absolute">
+    <div class="card2">1</div>
+    <div class="card2">2</div>
+    <div class="card2 col-start-2 col-span-2">3</div>
+    <div class="card2 row-span-3">4</div>
+    <div class="card2 row-span-3">5</div>
+    <div class="card2 row-[1] col-[3/5]">6</div>
+    <div class="card2 col-[2/4]">7</div>
+    <div class="card2">8</div>
+    <div class="card2 col-start-3 col-span-2">9</div>
+  </div>
+
+
+  <div
+    class="mx-auto ml-2 mr-2 pt-10 border rounded-xl p-4 mt-4 be grid grid-cols-2 gap-2 h-[80vh] relative before:top-0 before:left-2 before:content-['Caso_real_común:'] before:absolute">
+    <div class="card2 col-span-2">header</div>
+    <div class="card2 col-span-2">nav</div>
+    <div class="card2">section</div>
+    <div class="card2">article</div>
+    <div class="card2 row-[3/5] col-start-2">aside</div>
+    <div class="card2 col-span-2">footer</div>
+  </div>
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">10 - Flexbox</p>
+  <div
+    class="mx-auto ml-2 mr-2 border rounded-xl p-4 mt-4 flex place-content-around relative pt-6 before:top-0 before:left-2 before:content-['Flex_place-content-around'] before:absolute">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+  </div>
+  <div
+    class="mx-auto ml-2 mr-2 border rounded-xl p-4 mt-4 flex place-content-between relative pt-6 before:top-0 before:left-2 before:content-['Flex_place-content-between'] before:absolute">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+  </div>
+  <div
+    class="mx-auto ml-2 mr-2 border rounded-xl p-4 mt-4 flex flex-col-reverse place-content-between relative pt-6 before:top-0 before:left-2 before:content-['Flex_flex-col-revese'] before:absolute">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+  </div>
+  <div
+    class="mx-auto ml-2 mr-2 border rounded-xl p-4 mt-4 h-[200px] flex items-center place-content-between relative pt-6 before:top-0 before:left-2 before:content-['Flex_items-center,_centra_verticalmente_(requiere_que_el_div_tenga_altura)'] before:absolute">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+  </div>
+  <div
+    class="mx-auto ml-2 mr-2 border rounded-xl p-4 mt-4 h-[200px] flex items-end place-content-between relative pt-6 before:top-0 before:left-2 before:content-['Flex_items-end_(requiere_que_el_div_tenga_altura)'] before:absolute">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+  </div>
+  <div
+    class="mx-auto ml-2 mr-2 border rounded-xl p-4 mt-4 h-[300px] flex items-start place-content-between relative pt-6 before:top-0 before:left-2 before:content-['Flex_items-start,_self-center_y_self-end_(requiere_que_el_div_tenga_altura)'] before:absolute">
+    <div class="card">1</div>
+    <div class="card self-center">2</div>
+    <div class="card self-end">3</div>
+  </div>
+  <div
+    class="mx-auto ml-20 mr-20 w-1/2 border rounded-xl p-4 mt-4 flex flex-wrap relative pt-6 before:top-0 before:left-2 before:content-['Flex-wrap'] before:absolute">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+    <div class="card">4</div>
+    <div class="card">5</div>
+    <div class="card">6</div>
+  </div>
+  <div
+    class="mx-auto ml-20 mr-20 w-1/2 border rounded-xl p-4 mt-4 flex flex-wrap gap-4 relative pt-6 before:top-0 before:left-2 before:content-['Flex-wrap_con_gap'] before:absolute">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+    <div class="card">4</div>
+    <div class="card">5</div>
+    <div class="card">6</div>
+  </div>
+  <div
+    class="mx-auto ml-20 mr-20 w-[50%] border rounded-xl p-4 mt-4 flex flex-wrap gap-4 relative pt-16 before:top-0 before:left-2 before:content-['Flex-wrap,_hijos_con_grow_para_que_crezcan_si_tienen_espacio'] before:absolute">
+    <div class="card grow">1</div>
+    <div class="card grow">2</div>
+    <div class="card grow">3</div>
+    <div class="card grow">4</div>
+    <div class="card grow">5</div>
+    <div class="card grow">6</div>
+  </div>
+  <div
+    class="mx-auto ml-20 mr-20 w-[50%] border rounded-xl p-4 mt-4 flex flex-wrap gap-4 relative pt-16 before:top-0 before:left-2 before:content-['Flex-wrap,_hijos_con_shrink-0_para_que_no_se_contraigan_mas_allá_de_su_tamaño_mínimo'] before:absolute">
+    <div class="card shrink-0">1</div>
+    <div class="card shrink-0">2</div>
+    <div class="card shrink-0">3</div>
+    <div class="card shrink-0">4</div>
+    <div class="card shrink-0">5</div>
+    <div class="card shrink-0">6</div>
+  </div>
+  <div
+    class="mx-auto ml-20 mr-20 w-[50%] border rounded-xl p-4 mt-4 flex flex-wrap gap-4 relative pt-16 before:top-0 before:left-2 before:content-['Flex-wrap,_hijos_con_shrink-0_y_grow_(crecen_todo_lo_que_pueden_sin_contraerse)'] before:absolute">
+    <div class="card grow shrink-0">1</div>
+    <div class="card grow shrink-0">2</div>
+    <div class="card grow shrink-0">3</div>
+    <div class="card grow shrink-0">4</div>
+    <div class="card grow shrink-0">5</div>
+    <div class="card grow shrink-0">6</div>
+  </div>
+  <div
+    class="mx-auto ml-20 mr-20 w-[80%] border rounded-xl p-4 mt-4 flex gap-4 relative pt-6 before:top-0 before:left-2 before:content-['Flex-basis,_cambiar_relación_de_tamaño'] before:absolute">
+    <div class="card basis-1/2 bg-orange-400 sm:basis-1/2 sm:bg-red-500 md:basis-1/3">1</div>
+    <div class="card basis-1/4 sm:basis-1/4 sm:bg-orange-400 md:basis-1/3 md:bg-red-500">2</div>
+    <div class="card basis-1/4 sm:basis-1/2  md:basis-1/3">3</div>
+  </div>
+
+
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">9 - Clases personalizadas:</p>
+  <p class="ml-2 font-semibold">Se agregan al archivo index.css:</p>
+  <pre>
+    @layer components {
+      .card {
+        @apply bg-red-500 w-2 h-20 grid place-content-center rounded-lg text-white font-bold border-2 border-red-600 text-4xl;
+      }
+    }
+  </pre>
+  <div class="mx-auto w-fit border rounded-xl p-4">
+    <span class="font-semibold ml-4">Div con clase .card:</span>
+    <div class="card mx-auto mt-4">1</div>
+  </div>
+
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">8 - Responsive Design:</p>
+
+  <div class="bg-slate-800 p-2 m-2 pb-8 sm:bg-white tablet:bg-blue-500">
+    <div
+      class="border-2 border-white p-6 w-60 mx-auto mt-10 sm:w-96 sm:border-blue-700 tablet:border-red-500 tablet:w-1/2">
+      <h2 class="text-xl font-bold text-center text-white sm:text-black sm:text-3xl tablet:text-orange-400">Título</h2>
+      <p class="text-lime-500 mt-4 sm:text-lime-700 sm:text-xl tablet:text-purple-700 tablet:font-semibold">Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Quae ipsa, eius nisi perferendis a iste eaque earum asperiores
+        exercitationem doloribus quibusdam at cupiditate id. Expedita deleniti rem dolorem voluptate iste.</p>
+    </div>
+  </div>
+
+
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">7 - Pseudoclases:</p>
+
+  <div class="p4 rounded-lg border mt-4 p-2 mx-auto w-2/3">
+
+    <h2 class="text-2xl mb-2 ">after/before:</h2>
+    <button
+      class="bg-orange-600 w-32 p-3 rounded-md relative after:content-['']  after:absolute after:left-32 after:border-transparent after:border-8 after:border-l-orange-600 after:top-4">Haz
+      click aquí</button>
+
+    <h2 class="text-2xl mb-2 mt-4">placeholder:</h2>
+    <input class="border ml-2 px-2 placeholder:text-orange-600 placeholder:italic" type="text" placeholder="Nombre:">
+
+    <h2 class="text-2xl mb-2 mt-4">file:</h2>
+    <input type="file"
+      class="file:bg-violet-100 file:border-0 file:rounded-md file:text-violet-700 file:font-semibold file:px-3 hover:file:bg-violet-300">
+
+    <h2 class="text-2xl mb-2 mt-4">marker:</h2>
+    <ol class="list-decimal ml-8 marker:text-red-500 marker:font-bold">
+      <li>Item</li>
+      <li>Item</li>
+      <li>Item</li>
+    </ol>
+
+    <h2 class="text-2xl mb-2 mt-4">selection:</h2>
+    <p class="selection:bg-green-400  selection:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Ullam rerum dignissimos accusantium deserunt, blanditiis cum assumenda autem id libero ab voluptates? Architecto
+      consequuntur laboriosam perferendis! Doloremque, quae voluptates! Odio, quis.</p>
+
+    <h2 class="text-2xl mb-2 mt-4">first-line y first-letter:</h2>
+    <p
+      class="first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter: font-bold first-letter:mr-3 first-letter:float-left">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Ullam rerum dignissimos accusantium deserunt, blanditiis cum assumenda autem id libero ab voluptates? Architecto
+      consequuntur laboriosam perferendis! Doloremque, quae voluptates! Odio, quis.</p>
+  </div>
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">6 - Estados (disabled, focus,
+    invalid, hover):
+  </p>
+
+  <div class="bg-blue-400 w-1/2 m-2 p-2 mx-auto">
+    <form action="" class="bg-white w-80 mx-auto rounded-lg p-6">
+      <input class="border border-gray-300 w-full px-3 py-2 mb-4 rounded-md disabled:bg-red-200" type="text"
+        placeholder="Nombre" disabled>
+
+      <input
+        class="border border-gray-300 w-full px-3 py-2 mb-4 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-600 invalid:focus:ring-red-400 peer"
+        type="email" placeholder="Correo">
+      <p class="text-red-400 hidden peer-invalid:block">El correo es incorrecto</p>
+
+      <input class="mt-4 border border-gray-300 w-full px-3 py-2 mb-4 rounded-md" type="password"
+        placeholder="Contraseña">
+
+      <input class="bg-blue-500 w-full py-2 text-white rounded-md cursor-pointer hover:bg-blue-400" type="submit"
+        value="Ingresar">
+    </form>
+  </div>
+
+
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">5 - Tamaños:</p>
+  <div class="bg-red-400 w-48">Medidas en Tailwind: w-48</div>
+  <div class="bg-indigo-400 w-24 h-16 m-2">w-24 h-16</div>
+  <div class="bg-red-400 w-[290px] mb-2">Medida personalizada w[290px]</div>
+  <div class="bg-red-400 w-42">Medida personalizada (tailwind.config.js) w-42</div>
+  <div class="h-28 border-2 border-red-600 m-2 w-96">
+    <div class="h-full bg-indigo-400">h-full ocupa el 100% de su contenedor, siempre que no sea el body.</div>
+  </div>
+  <div class="h-screen bg-red-600">Ocupando todo el espacio disponible con h-screen</div>
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">4 - Gradientes:</p>
+  <div class="bg-gradient-to-r from-azul-claro via-pink-500  to-cyan-400 text-white font-bold">DIV Gradiente</div>
+  <div class="text-4xl font-extrabold">
+    <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-600">Jonatandb</span>
+  </div>
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">3 - Botones:</p>
+  <button class="bg-azul-claro hover:bg-azul-oscuro text-white p-2 rounded-lg w-36 block mx-auto my-2 select-none">Lindo
+    botón</button>
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">2 - Colores establecidos en
+    tailwind.config.js:</p>
+  <p class="text-azul-claro m-2">Color "azul-claro"</p>
+  <p class="bg-azul-oscuro text-white m-2">Estos colores son reutilizables</p>
+  <p class="text-azul-claro bg-white border-2 border-azul-claro m-2">Se pueden usar también en bordes</p>
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500">1 - Colores:</p>
+  <p class="text-sky-600">Color de frente</p>
+  <p class="bg-teal-400">Color de fondo</p>
+  <p class="text-[#fa1]">Color de frente pesonalizado</p>
+  <p class="bg-[#fad]">Color de fondo pesonalizado</p>
+
+
+  <p class="text-2xl font-bold underline bg-lime-500 mt-10 border-t-4 border-red-500"></p>
+  <a class="text-azul-claro hover:text-azul-oscuro" href="https://tailwindcss.com/docs/guides/vite">Install Tailwind CSS
+    with Vite</a>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
